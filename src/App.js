@@ -6,7 +6,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import ContactGet from "./components/ContactGet";
-
+import Header from "./components/Header";
 function App() {
     return (
     <div className="flex flex-col min-h-screen">
