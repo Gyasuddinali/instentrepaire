@@ -1,0 +1,17 @@
+/* Custom styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(92, 188, 205, 0.288);
+  
+}
+
+.custom-heading {
+  color: #1a202c;
+  font-weight: bold;
+}
+
+/* You can override Tailwind classes here if needed */
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+
