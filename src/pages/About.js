@@ -6,7 +6,7 @@ function About() {
       <h1 className="text-center mb-5">About InstentRepair</h1>
       <div className="row align-items-center">
         <div className="col-lg-6 mb-4 mb-lg-0">
-          <img src={cmb1} alt="QuickFix Team" className="img-fluid rounded shadow" />
+          <img src={cmb1} alt="InstentRepair Team" className="img-fluid rounded shadow" />
         </div>
         <div className="col-lg-6">
           <h2>Our Story</h2>

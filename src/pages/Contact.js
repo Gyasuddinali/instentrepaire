@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import '../components/cont.css'
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -63,8 +63,8 @@ function Contact() {
             </li>
           </ul>
         </div>
-        <div className="col-md-6">
-          <form onSubmit={buttonhnd}>
+        <div className="col-md-6 container" id="frm">
+          <form onSubmit={buttonhnd} className="mt-3 mb-3 ms-3 me-3" >
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Name
