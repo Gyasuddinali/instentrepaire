@@ -1,26 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Header() {
+  const [shows,setShows]=useState(false)
+  const hnd=()=>{
+    setShows(!shows);
+  }
   return (
     <header className=" text-white bg-dark">
-      <nav className="navbar navbar-expand-lg navbar-dark">
-        <div className="container">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+        <div className="container float-start">
           <Link to="/" className="navbar-brand">
           InstentRepair
           </Link>
           <button
-            className="navbar-toggler btn-outline-light"
+            className="navbar-toggler"
             type="button"
+            aria-expanded={shows ? 'true' : 'false'}
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
-            aria-expanded="false"
+            // aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={hnd}
+            style={{
+              backgroundColor: "transparent",
+              border: "1px solid  rgb(255, 255, 255)", 
+            }}
           >
+
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse " id="navbarNav">
             <ul className="navbar-nav ms-auto text-white">
               <li className="nav-item">
                 <Link to="/" className="nav-link text-white">
