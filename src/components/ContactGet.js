@@ -35,21 +35,34 @@ const nav=useNavigate();
 
   return (
     <div className="p-6 bg-gray-100 rounded-lg">
-      <h2 className="text-2xl font-bold mb-6">Contact info Form Submissions</h2>
+      <h2 className="text-2xl font-bold mb-6 mt-4">Contact info Form Submissions</h2>
       <div className="space-y-4">
+      <table className="table table-bordered table-hover">
+             <thead className="table-light">
+                 <tr>
+                  <th>Email</th>
+                  <th>Phone</th>
+                   {/* <th>Email</th> */}
+<th>Service</th>
+                 <th>Message</th>
+                 </tr>
+               </thead>
+             <tbody>
         {contacts.length === 0 ? (
           <p>No contact submissions found.</p>
         ) : (
           contacts.map((contact) => (
-            <div key={contact._id} className="p-4 border rounded bg-white">
-              <h3 className="text-xl font-semibold">{contact.name}</h3>
-              <p><strong>Email:</strong> {contact.email}</p>
-              <p><strong>Phone:</strong> {contact.phone}</p>
-              <p><strong>Service:</strong> {contact.service}</p>
-              <p><strong>Message:</strong> {contact.message}</p>
-            </div>
+          <tr>
+              <td>{contact.name}</td>
+              <td>{contact.email}</td>
+              <td>{contact.service}</td>
+              <td>{contact.message}</td>
+          </tr>
+           
           ))
         )}
+        </tbody>
+        </table>
       </div>
     </div>
   );
